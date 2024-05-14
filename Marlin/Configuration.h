@@ -66,8 +66,8 @@
  * Primary Extruder steps per mm (plugged in to E0 port on controller)
  * (How to calibrate: https://toms3d.org/2014/04/06/3d-printing-guides-calibrating-your-extruder/)
  */
-//#define E0_STEPS      100 // Stock extruder. If you have a Tevo Titan, try 400 then calibrate.
-#define E0_STEPS      400 // Stock extruder. If you have a Tevo Titan, try 400 then calibrate.
+//#define E0_STEPS      100   // Stock extruder
+#define E0_STEPS      400     // Tevo Titan extruder
 #define CHANGE_E0_DIRECTION   // If your extruder is going backwards, enable this.
 
 /**
@@ -185,13 +185,13 @@
  *       CUSTOM_USER_MENUS for PETG to appear, along with PLA and ABS, under Custom Commands.
  *       PLA and ABS will appear under both Custom Command and Prepare.
  */
-#define Hot_PLA     215
+#define Hot_PLA     205
 #define Bed_PLA      60
 
-#define Hot_ABS 		235
-#define Bed_ABS 		110
+#define Hot_ABS     235
+#define Bed_ABS     110
 
-#define Hot_PETG 		230
+#define Hot_PETG    230
 #define Bed_PETG     80
 
 /**
@@ -1207,7 +1207,7 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 200
+#define X_BED_SIZE 190   // RR: reduced bed size because print sled collides with the hardware assembly on the right frame
 #if ENABLED(LARGE_BED)
   #define Y_BED_SIZE 280
 #else
